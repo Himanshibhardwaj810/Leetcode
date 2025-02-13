@@ -13,12 +13,15 @@ public class is_string_prefix_array {
     	StringBuilder builder=new StringBuilder();
     	for(int i=0;i<words.length;i++) {
     		builder.append(words[i]);
-    		
-    		if(i>s.length()|| builder.charAt(i)!=s.charAt(i)) {
+    		if(builder.length()>s.length()) {
     			return false;
     		}
+    		if(builder.toString().equals(s)) {
+    			return true;
+    		}
     	}
-    	return true;
+    	return  false;
+
 
     }
 
