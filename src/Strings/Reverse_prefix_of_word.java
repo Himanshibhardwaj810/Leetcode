@@ -18,11 +18,13 @@ public class Reverse_prefix_of_word {
     				ans.append(word.charAt(j));
     			}
     			ans.append(word.substring(i + 1));//here i+1 define the starting of the substring
-    			return ans.toString();
+    			return ans.toString();//substring(int beginIndex)
     		}
     	}
     	return word;
         
     }
+    //String str = "abcdef";
+    //System.out.println(str.substring(1, 4)); // Output: "bcd"
 
 }

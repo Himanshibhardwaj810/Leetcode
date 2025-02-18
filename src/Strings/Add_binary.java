@@ -40,7 +40,8 @@ public class Add_binary {
 		}
 		ans.reverse();
 		return ans.toString();
-
+//Time Complexity: O(max(N, M)) where n.m are length of a and b strings resp.
+		//Space Complexity: O(max(N, M))
 	}
 
 }
