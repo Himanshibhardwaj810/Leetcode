@@ -16,13 +16,12 @@ public class Repeated_string_match {
     		ans.append(a);
     		count++;
     	}
-    	System.out.println(ans);
+//    	System.out.println(ans);
     	if(ans.toString().contains(b)) {
     		return count;
     	}
     	ans.append(a);
     	count++;
-    	System.out.println(ans);
     	if(ans.toString().contains(b)) {
     		return count;
     	}
