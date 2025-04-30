@@ -2,7 +2,7 @@ package arrays.striver_sheet;
 import java.util.*;
 import java.util.Arrays;
 
-public class longest_comsecutive_subsequence {
+public class longest_consecutive_subsequence {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -39,17 +39,7 @@ public class longest_comsecutive_subsequence {
     	return longest;
     	
     }
-	//brute force
-    public static int longestConsecutive(int[] nums) {
-        Arrays.sort(nums);
-        HashSet<Integer>set=new HashSet<>();
-        for(int i=0;i<nums.length-1;i++) {
-        	if(nums[i]+1==nums[i+1]) {
-        		set.add(nums[i]);
-        		set.add(nums[i+1]);
-        	}
-        }
-        return set.size();
-    }
+
+
 
 }

@@ -10,7 +10,7 @@ public class repeat_and_missing_number {
 		System.out.println(Arrays.toString(missing_number3(nums)));
 
 	}
-
+//brute
 	public static int[] missing_number(int[] nums) {
 		HashSet<Integer> set = new HashSet<>();
 

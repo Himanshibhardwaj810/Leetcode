@@ -9,6 +9,9 @@ public class Four_sum {
 		System.out.println(fourSum(nums,target));
 
 	}
+	//brite force
+	//time complexity=o(n4)
+	//space complexity= 0(1);
 
 	public static List<List<Integer>> fourSum(int[] nums, int target) {
 		List<List<Integer>> list=new ArrayList<>();
@@ -49,5 +52,7 @@ public class Four_sum {
 		return list;
 
 	}
+	//time complexity=o(n3)
+	//space complexity= 0(1)
 
 }

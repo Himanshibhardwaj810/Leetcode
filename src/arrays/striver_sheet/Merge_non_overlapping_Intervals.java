@@ -26,7 +26,7 @@ public class Merge_non_overlapping_Intervals {
 		
 
 	}
-	//withoiut using extra space
+	//without using extra space
     public static int[][] merge2(int[][] intervals) {
     	//sorting intervals based on startibng time
     	Arrays.sort(intervals,(a,b)->Integer.compare(a[0],b[0]));

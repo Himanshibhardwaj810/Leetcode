@@ -15,7 +15,7 @@ public class pascal_triangle {
 		List<Integer>temp=new ArrayList<>();
 		temp.add(1);
 		for(int col=1;col<row;col++) {
-			ans=ans*(row-col);
+			ans=ans*(row-col);//we have to use combination n-1 C r-1
 			ans=ans/col;
 			System.out.println(ans);
 			temp.add(ans);

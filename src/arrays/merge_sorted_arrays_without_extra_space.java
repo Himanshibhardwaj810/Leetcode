@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class merge_sorted_arrays {
+public class merge_sorted_arrays_without_extra_space {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

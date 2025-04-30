@@ -25,6 +25,7 @@ public class count_ofSubarray_ksum {
 			}
 			//sum is stored in hashmap in order to store the prefix sums
 			map.put(sum, map.getOrDefault(sum,0) + 1);
+			System.out.println(map);
 			//if the sum doesn't exist in map then initialize it with default 0 then addding 1
 
 		}

@@ -34,7 +34,7 @@ public class Add_binary {
 			 ans.append(sum%2);//2%2=0
 			 carry=sum/2;//2/2=1
 //			 i--;j--;
-			 //this will alse give  the same ans but the only fact is the leetcode platform
+			 //this will also give  the same ans but the only fact is the leetcode platform
 			 //result is high in above one process
 			
 		}

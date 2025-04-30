@@ -1,4 +1,4 @@
-package arrays.striver_sheet;
+ package arrays.striver_sheet;
 
 public class power_x_n {
 

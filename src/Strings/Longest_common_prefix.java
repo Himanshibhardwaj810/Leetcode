@@ -4,7 +4,7 @@ public class Longest_common_prefix {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String[] strs= {"a","a","b"};
+		String[] strs= {"flower","flow","flight"};
 		System.out.println(longestCommonPrefix(strs));
 		
 
