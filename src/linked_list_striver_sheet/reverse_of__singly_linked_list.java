@@ -1,4 +1,4 @@
-package linked_list;
+package linked_list_striver_sheet;
 
 public class reverse_of__singly_linked_list {
 
@@ -49,9 +49,9 @@ public class reverse_of__singly_linked_list {
     	
     }
     
-    static class ListNode{
-    	int val;
-    	ListNode next;
+    public static class ListNode{
+    	public int val;
+    	public ListNode next;
     	ListNode(int val){
     		this.val=val;
     	}

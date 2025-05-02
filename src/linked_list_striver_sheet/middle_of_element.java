@@ -1,4 +1,4 @@
-package linked_list;
+package linked_list_striver_sheet;
 
 public class middle_of_element {
 
