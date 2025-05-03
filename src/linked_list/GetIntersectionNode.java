@@ -1,6 +1,6 @@
 package linked_list;
 import java.util.*;
-import linked_list.remove_nth_node.ListNode;
+
 
 public class GetIntersectionNode {
 
@@ -34,5 +34,7 @@ public class GetIntersectionNode {
 			this.val = val;
 		}
 	}
+	
+
 
 }

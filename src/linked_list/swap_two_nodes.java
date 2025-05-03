@@ -1,6 +1,6 @@
 package linked_list;
 
-import linked_list.middle_of_element.ListNode;
+
 // 328,24,19,160,2181
 public class swap_two_nodes {
 
