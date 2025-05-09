@@ -8,6 +8,44 @@ public class get_intersection_node {
 		// TODO Auto-generated method stub
 
 	}
+	
+	//optimal approach
+//	take two pointers a and b if any of them get null start that pointer 
+//	from the head of other list if intersetion node exist the a becomes equal to
+//	b after atmost two passes
+	public ListNode getIntersectionNodeoptimal(ListNode headA, ListNode headB) {
+		if(headA==null || headB==null) {
+			return null;
+		}
+		
+		ListNode a=headA;
+		ListNode b=headB;
+		while(a!=b) {//till a not become equal to b
+			if(a!=null) {
+				a=a.next;
+			}else {
+				a=headB;
+			}
+			
+			if(b!=null) {
+				b=b.next;
+			}else {
+				b=headA;
+			}
+		}
+		return a;//it can be null if intersection node doesn't exist or 
+		//can be the intersection node
+		
+	}
+//	✅ Time Complexity: O(m + n)
+//	m is the length of headA's linked list.
+//	n is the length of headB's linked list.
+//	In the worst case, both pointers (a and b) traverse both lists entirely (first their own list, then the other list).
+//	That’s a total of m + n steps.
+	
+//	✅ Space Complexity: O(1)
+	
+	
 	//brute force
 	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
 		ListNode temp1=headA;
