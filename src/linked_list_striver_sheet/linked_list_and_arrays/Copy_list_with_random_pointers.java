@@ -1,4 +1,4 @@
-package linked_list_striver_sheet;
+package linked_list_striver_sheet.linked_list_and_arrays;
 
 public class Copy_list_with_random_pointers {
 

@@ -1,4 +1,4 @@
-package linked_list_striver_sheet;
+package linked_list_striver_sheet.linked_list_and_arrays;
 
 public class Rotate_a_linked_list {
 
@@ -65,5 +65,12 @@ public class Rotate_a_linked_list {
         return head;
     }
     //test case ni pass hore
+    public class ListNode{
+    	ListNode next;
+    	int val;
+    	public ListNode(int val) {
+    		this.val=val;
+    	}
+    }
 
 }
