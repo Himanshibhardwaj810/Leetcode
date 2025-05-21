@@ -1,0 +1,3 @@
+O(m+n) && o(m*n)
+If your algorithm "touches" each element a constant number of times (not nested), it's O(m + n)
+If each element causes scanning of another full array, it's O(m × n)
