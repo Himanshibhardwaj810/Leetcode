@@ -77,7 +77,7 @@ public class Next_Greater_Element {
 			 int indexinNums2=-1;
 			// Step 1: Find index of nums1[i] in nums2
 			 for(int j=0;j<nums2.length;j++) {
-				 if(num>nums2[j]) {
+				 if(num==nums2[j]) {
 					 indexinNums2=j;
 					 break; 
 				 }
