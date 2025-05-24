@@ -1,5 +1,7 @@
 package Stack_and_Queues.Stack_and_Queues_part2;
 
+import java.util.*;
+
 public class celebrity_problem {
 
 	public static void main(String[] args) {
@@ -17,20 +19,20 @@ public class celebrity_problem {
 
 			// row check Does person know anyone?
 			for (int j = 0; j < n; j++) {
-				if(person!=j && mat[person][j]==1 ) {
-					knowsNoOne=false;
+				if (person != j && mat[person][j] == 1) {
+					knowsNoOne = false;
 					break;
 				}
 			}
 			// Column check: Does everyone know person?
-			for(int i=0;i<n;i++) {
-				if(i!=person && mat[i][person]==0) {
-					knownByEverybody=false;
+			for (int i = 0; i < n; i++) {
+				if (i != person && mat[i][person] == 0) {
+					knownByEverybody = false;
 					break;
 				}
 			}
-			
-			if(knowsNoOne && knownByEverybody) {
+
+			if (knowsNoOne && knownByEverybody) {
 				return person;
 			}
 		}
@@ -68,5 +70,54 @@ public class celebrity_problem {
 //    Approach	Time Complexity	Space Complexity
 //    Brute Force	O(n^2)	O(1)
 //    Optimal	O(n)	O(1)
+
+	// using stack
+//	1️⃣ Sab logon ko ek stack mein daalo.
+//	2️⃣ Do-do log stack se nikaalo (pop), inko compare karo:
+//
+//	Agar A B ko jaanta hai, toh A celebrity nahi ho sakta. Stack mein B daalo.
+//
+//	Agar A B ko nahi jaanta, toh B celebrity nahi ho sakta. Stack mein A daalo.
+//
+//	3️⃣ End mein stack mein ek hi candidate bachega.
+//	4️⃣ Candidate ko verify karo (row aur column check):
+//
+//	Row: Kya candidate kisi ko jaanta?
+//
+//	Column: Kya sab candidate ko jaante hain?
+	public int celebrity3(int mat[][]) {
+		Stack<Integer> stack = new Stack<>();
+		int n = mat.length;
+		// first push all the candidates
+		for (int i = 0; i < n; i++) {
+			stack.push(i);
+		}
+		while (stack.size() > 1) {// as at last stack should have single candidate
+			int A = stack.pop();
+			int B = stack.pop();
+			if (mat[A][B] == 1) {
+				stack.push(B);// as A knows B then A can't be candidate push B
+			} else {
+				stack.push(A);
+			}
+		}
+
+		if (stack.isEmpty()) {
+			return -1;
+		}
+		// at last single candidate is left
+		int candidate = stack.pop();
+		// verify it using row and col check
+		for (int i = 0; i < n; i++) {
+			if (i != candidate) {// no diagonal element as one person know itself
+				if (mat[candidate][i] == 1 || mat[i][candidate] == 0) {
+					return -1;
+				}
+			}
+		}
+		return candidate;
+
+	}
+	//tC & sc=o(n)
 
 }
