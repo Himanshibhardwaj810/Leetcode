@@ -6,9 +6,24 @@ public class removeduplicates {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = {  0,1, 1, 2,3,4,4};
-		System.out.println(removeduplicates(arr));
+		int[] arr = {  0,1, 1};
+		System.out.println(removeduplicates2(arr));
 
+	}
+	
+	//my method
+	public static int removeduplicates2(int[] nums) {
+		int index=0;
+		for(int i=0;i<nums.length-1;i++) {
+			if(nums[i]!=nums[i+1]) {
+				nums[index]=nums[i];
+				index++;
+			}
+		}
+		nums[index]=nums[nums.length-1];//as last two elements can be equal
+		index++;
+		return index;
+		
 	}
 
 	public static int removeduplicates(int[] arr) {
@@ -26,5 +41,7 @@ public class removeduplicates {
 		return k+1;
 
 	}
+	
+	
 
 }

@@ -24,6 +24,8 @@ public class move_zeroes {
 	}
 	System.out.println(Arrays.toString(nums));
 	}
+	
+	
     public static void moveZeroes(int[] nums) {
         Arrays.sort(nums);
         System.out.println(Arrays.toString(nums));
