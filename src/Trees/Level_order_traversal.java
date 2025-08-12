@@ -25,7 +25,9 @@ public class Level_order_traversal {
 			TreeNode temp=queue.poll();
 			if(temp==null) {
 				System.out.println();
-				if(!queue.isEmpty()) {
+				if(queue.isEmpty()) {
+					return;
+				}else {
 					queue.add(null);//so that the one level exist betwween two null
 					//to track the next level
 				}
