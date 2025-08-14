@@ -20,13 +20,17 @@ public class Top_view_binary_tree {
             Node currNode=current.node;
             int hd=current.hd;
             
+            
+         // If HD not seen before, add to map
             if(!map.containsKey(hd)){
                 map.put(hd,currNode.data);
             }
-            
+         // Add left child with hd - 1
             if(currNode.left!=null){
                 q.add(new Pair(currNode.left,hd-1));
             }
+            
+            // Add right child with hd + 1
             if(currNode.right!=null){
                 q.add(new Pair(currNode.right,hd+1));
             }
@@ -39,6 +43,7 @@ public class Top_view_binary_tree {
         
         
     }
+	//Complexity=o(nlogk)
     
     static class Pair{
         Node node;
