@@ -10,30 +10,40 @@ public class Morris_Inorder_traversal {
 		// TODO Auto-generated method stub
 
 	}
+//	time complexity o(n)
+//	space complexity=o(1)
 
 	public List<Integer> inorderTraversal(TreeNode root) {
-		 List<Integer> res=new ArrayList<>();
-	        if(root==null) return res;
-	        TreeNode curr=root;
-	        while(curr!=null){
-	            if(curr.left==null){//if left side gets null then print the value
-	                res.add(curr.val);
-	                curr=curr.right;//move to right as per inorder
-	            }
-	            else{
-	                TreeNode leftChild=curr.left;
-	                while (leftChild.right!=null){//go to the rightmost node of left child
-	                    leftChild=leftChild.right;//till right is null
-	                }
-	                leftChild.right=curr;//connect the right node with curr node
+		List<Integer> res = new ArrayList<>();
+		if (root == null) {
+			return res;
+		}
+		TreeNode curr = root;
+		while (curr != null) {
+			if (curr.left == null) {//left node end ->visit root -> right
+				res.add(curr.val);
+				curr = curr.right;
+			} else {
+				TreeNode leftChild = curr.left;
+				// IMPORTANT: Stop if we reach a thread back to curr
+				while (leftChild.right != null && leftChild.right != curr) {
+					leftChild = leftChild.right;
+				}
+				if (leftChild.right == null) {
+					// First time visiting the left subtree making thread
+					leftChild.right = curr;
+					curr = curr.left;
+				} else {
+					// Second time → remove thread and visit
+					leftChild.right = null;
+					res.add(curr.val);
+					curr = curr.right;
+				}
+			}
 
-	                //delete the link between curr and curr.left otherwise the loop continues
-	                TreeNode temp=curr;
-	                curr=curr.left;
-	                temp.left=null;
-	            }
-	        }
-	        return res;
+		}
+		return res;
+
 	}
 
 	static class TreeNode {
